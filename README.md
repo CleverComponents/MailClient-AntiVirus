@@ -48,7 +48,7 @@ If HTMLKind = htmlAdvanced (recommended), HTML with CSS is used.
 function ComposeAndSendHTMLEmail(Smtp: TclSmtp; Msg: TclMailMessage;
   HTMLKind: THTMLKind = htmlAdvanced): Boolean;
 // Shows a dialog for editing a message and sending using both the Smtp and Msg parameters.
-"From", "To", "Subject" of e-mail are initialized using the corresponding properties of Msg.
+// "From", "To", "Subject" of e-mail are initialized using the corresponding properties of Msg.
 ```
 
 3. clRVSendDialogEx.pas, contains:
