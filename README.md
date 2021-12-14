@@ -8,9 +8,7 @@ The [HtmlViewer](https://github.com/BerndGabriel/HtmlViewer/) library is used fo
 
 The program allows you to authenticate using the username/password information. Also the SMTP component supports the OAUTH2.0, Digest, NTLM, and other SASL authentication methods. Please check out the following example to learn how to use the OAUTH2.0 protocol together with this components: [GMail SMTP Client](https://github.com/CleverComponents/Clever-Internet-Suite-Examples/tree/master/Delphi/GMailSMTP)    
 
-Both the SMTP and the POP3 client components completely support the SSL/TLS mode, including the client certificate authorization and the server validation process. The following example shows how to connect to a mail server via TLS: [SMTP Client SSL](https://github.com/CleverComponents/Clever-Internet-Suite-Examples/tree/master/Delphi/SmtpClientSSL)   
-
-The other example connects to a POP3 mailbox using TLS: [POP3 Client SSL](https://github.com/CleverComponents/Clever-Internet-Suite-Examples/tree/master/Delphi/Pop3ClientSSL)   
+Both the SMTP and the POP3 client components completely support the SSL/TLS mode, including the client certificate authorization and the server validation process. The following example shows how to connect to a mail server via TLS: [SMTP Client SSL](https://github.com/CleverComponents/Clever-Internet-Suite-Examples/tree/master/Delphi/SmtpClientSSL) The other example connects to a POP3 mailbox using TLS: [POP3 Client SSL](https://github.com/CleverComponents/Clever-Internet-Suite-Examples/tree/master/Delphi/Pop3ClientSSL)   
 
 ![Screenshot](MailClient-Antivirus.jpg)
 
@@ -37,9 +35,9 @@ The current version of the MailClient project uses an outdated version of ClamAV
 ``` delphi
 procedure SendHTMLEmail(RV: TCustomRichView; Smtp: TclSmtp; Msg: TclMailMessage;
   HTMLKind: THTMLKind = htmlAdvanced; Attachments: TStrings = nil);
-This procedure sends a message. The message body is provided by the RV parameter,
-the other fields ("From", "To", "Subject") are from the Msg parameter.
-The message is sent using the Smtp component. You can provide an optional list of attached files.
+// This procedure sends a message. The message body is provided by the RV parameter,
+// the other fields ("From", "To", "Subject") are from the Msg parameter.
+// The message is sent using the Smtp component. You can provide an optional list of attached files.
 If HTMLKind = htmlSimple, a basic HTML is used.
 If HTMLKind = htmlAdvanced (recommended), HTML with CSS is used.
 ```
@@ -49,7 +47,7 @@ If HTMLKind = htmlAdvanced (recommended), HTML with CSS is used.
 ``` delphi
 function ComposeAndSendHTMLEmail(Smtp: TclSmtp; Msg: TclMailMessage;
   HTMLKind: THTMLKind = htmlAdvanced): Boolean;
-It shows a dialog for editing a message and sending using both the Smtp and Msg parameters.
+// Shows a dialog for editing a message and sending using both the Smtp and Msg parameters.
 "From", "To", "Subject" of e-mail are initialized using the corresponding properties of Msg.
 ```
 
@@ -63,7 +61,7 @@ function ReplyToHTMLEmail(MailSource: TStrings; HowToReply: TMessageReplyKind;
   const From: String; HTMLKind: THTMLKind = htmlAdvanced;
   MaxLineLength: Integer = 80): TMessageEditResult;
 
-where
+(*where
   TMessageReplyKind  = (mekEdit, mekReply, mekReplyToAll, mekForward);
   TMessageEditResult = (meCancel, meSave, meSend);
 
@@ -77,7 +75,7 @@ where
     MaxLineLength is used to break lines when quoting text for replying or
     forwarding.
 
-  This unit uses THTMLViewer and TrvHtmlViewImporter, see above.
+  This unit uses THTMLViewer and TrvHtmlViewImporter, see above.*)
 ```
 
 Please feel free to [Contact Us](https://www.clevercomponents.com/support/) and ask any program related questions.   
