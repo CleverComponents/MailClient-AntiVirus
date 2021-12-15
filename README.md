@@ -12,6 +12,8 @@ Both the SMTP and the POP3 client components completely support the SSL/TLS mode
 
 ![Screenshot](MailClient-Antivirus.jpg)
 
+[Read the Article](https://www.clevercomponents.com/articles/article034/mailclientav.asp)
+
 ## How to compile
 
 1. Please clone the [GitHub/CleverComponents/MailClient-AntiVirus](https://github.com/CleverComponents/MailClient-AntiVirus) repository.
